@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --main-font-primary: Arial, sans-serif;
+            --main-color: red;
+            --main-margin: 24px;
+            --main-padding: 24px;
+        }
+
+        @media screen and (max-width: 500px) {
+            div {
+                margin: var(--main-margin);
+                background-color: var(--main-color);
+                width: 100%;
+                height: 128px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

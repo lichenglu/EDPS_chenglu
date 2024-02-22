@@ -1,0 +1,31 @@
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.row {
+    font-size: 24px;
+}
+
+/* Try 
+names (xx-small, x-small, small, medium, large, x-large, xx-large), 
+relative names (smaller, larger – relative to the parent), 
+units of length (in px, em, rem), 
+percentage (50% of the default size or size inherited from parent),  */
+#left {
+    font-size: 1em;
+    font-variant: normal;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform */
+    /* text-transform: capitalize; */
+    /* Drop cap */
+    /* https://css-tricks.com/snippets/css/drop-caps/ */
+}
+
+#right {
+    font-size: 1.5rem;
+}
