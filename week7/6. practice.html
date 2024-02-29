@@ -23,65 +23,227 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
+    <style>      
       body {
         font-family: Anta;
+        --green: #79d86a;
+        --black: #2d2929;
+        --black-darker: #2a2222;
+        --white: #f8f8f8;
+      }
+
+      i {
+        color: var(--white);
+      }
+
+      h2,
+      span {
+        color: var(--green);
+      }
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      h3 {
+        color: var(--white);
       }
 
       .circle-img {
-        width: 200px;
-        height: 200px;
+        min-width: 150px;
+        min-height: 150px;
+        width: 70%;
+        aspect-ratio: 1 / 1;
+        --webkit-aspect-ratio: 1 / 1;
         object-fit: cover;
-        border-radius: 50%;
+        border-radius: 100%;
+      }
+
+      .navigation-container {
+        background-color: var(--black);
+        min-height: 100%;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
+
+      /**
+      .title {
+        margin-top: 36px;
+      }*/
+
+      .profile {
+        margin: 36px 0;
+      }
+
+      .speech-bubble {
+        border: 2px solid #666;
+        padding: 12px;
+        border-radius: 12px;
+        position: relative;
+        background-color: var(--black-darker);
+        margin: 24px 24px;
+      }
+
+      .speech-bubble::after {
+        content: "";
+        position: absolute;
+        top: -48px;
+        left: 10%;
+        width: 24px;
+        height: 48px;
+        background-color: #666;
+        clip-path: polygon(100% 0, 0% 100%, 77% 100%);
+      }
+
+      .speech-bubble::before {
+        content: "";
+        position: absolute;
+        top: -43px;
+        left: calc(10% + 2px);
+        width: 20px;
+        height: 44px;
+        background-color: var(--black-darker);
+        clip-path: polygon(100% 0, 0% 100%, 77% 100%);
+        z-index: 999;
+      }
+
+      .speech-bubble h3 {
+        color: var(--green);
+      }
+
+      .star {
+        width: 80%;
+      }
+
+      .bio {
+        font-size: 1.5rem;
+        display: grid;
+        grid-template-columns: fit-content(32px) fit-content(128px);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 18px;
+        justify-content: center;
+      }
+
+      .bio-text {
+        justify-self: start;
+
+      }
+
+      .second-column {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-height: 100vh;
+        padding: 24px;
+      }
+
+      .box-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px
+      }
+      
+      .box {
+        border: 1px solid var(--green);
+        box-shadow: 0 0 18px 1px var(--black-darker);
+        height: 100%;
+      }
+
+      .box-container h3 {
+        color: var(--green);
+      }
+
+      #parent-row {
+        height: 100vh;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="text-center">
+    <div class="container-fluid">
+      <div class="row" id="parent-row">
+        <div class="col-md-3 navigation-container">
+          <div class="text-center title">
             <h2>Tyler Greene</h2>
-            <h3>SpacePlace Patron</h3>
+            <h3>Space Place Patron</h3>
           </div>
-          <div class="text-center">
+          <div class="text-center profile">
             <img
               src="./assets/genevieve_img.png"
               class="circle-img"
               alt="something cool"
             />
           </div>
+
+          <div class="text-center speech-bubble">
+            <!-- <div class="speech-bubble-triangle"></div>
+            <div class="speech-bubble-triangle-border"></div> -->
+            <h3>My biggest dream is to go into space in real life!</h3>
+          </div>
+
+          <div class="row">
+            <img src="./assets/stars.png" class="mx-auto img-fluid star">
+          </div>
+
           <div class="text-center bio">
-            <div class="row mx-auto justify-content-center" style="width: 95%">
-                <div class="col-1">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <div class="col-3 text-left">
-                    <span>13 years old</span>
-                </div>
+            <div class="bio-icon">
+              <i class="fa-solid fa-user"></i>
             </div>
 
-            <div class="row mx-auto justify-content-center" style="width: 95%">
-                <div class="col-1">
-                    <i class="fa-solid fa-school"></i> 
-                </div>
-                <div class="col-3 text-left">
-                    <span>student</span>
-                </div>
+            <div class="bio-text">
+              <span>13 years old</span>
             </div>
 
-            <div class="row mx-auto justify-content-center" style="width: 95%">
-                <div class="col-1">
-                    <i class="fa-solid fa-house"></i>
-                </div>
-                <div class="col-3 text-left">
-                    <span>lehi/Utah</span>
-                </div>
+            <div class="bio-icon">
+              <i class="fa-solid fa-school"></i>
+            </div>
+
+            <div class="bio-text">
+              <span>student</span>
+            </div>
+
+            <div class="bio-icon">
+              <i class="fa-solid fa-house"></i>
+            </div>
+
+            <div class="bio-text">
+              <span>lehi/Utah</span>
             </div>
           </div>
         </div>
-        <div class="col-md-6"></div>
-        <div class="col-md-3"></div>
+        <div class="col-md-6 second-column">
+          <div class="box-container" style="height: 45%">
+            <h3>Bio</h3>
+            <div class="box"></div>
+          </div>
+          <div class="box-container" style="height: 25%">
+            <h3>Wants & Needs</h3>
+            <div class="box"></div>
+          </div>
+          <div class="box-container" style="height: 30%">
+            <h3>Knowledge</h3>
+            <div class="box"></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box-container" style="height: calc(100%/3)">
+            <h3>Motivations</h3>
+            <div class="box"></div>
+          </div>
+          <div class="box-container" style="height: calc(100%/3)">
+            <h3>Frustrations</h3>
+            <div class="box"></div>
+          </div>
+          <div class="box-container" style="height: 33.33%">
+            <h3>Traits</h3>
+            <div class="box"></div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
