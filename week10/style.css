@@ -1,0 +1,58 @@
+/* Reset some basic elements for consistency */
+body, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This ensures padding and border are included in the total width and height */
+}
+
+/* 1. Experiment with Padding
+Objective: Understand how padding affects the space between the content of an element and its border.
+Task: Create a <div> element with a class of padding-box. In your CSS, apply a background color, set a specific height and width (e.g., 200px by 200px), and then play with different padding values (e.g., padding: 20px;).
+Explore: Try different units for padding (pixels, em, percentages) and see how they affect the element. */
+
+.padding-box {
+    background-color: rgb(29, 138, 132);
+    height: 100px;
+    width: 42px;
+    padding: 5em 3em;
+}
+
+/* 
+2. Learn About Border
+Objective: Learn how the border property defines the boundary of an element.
+Task: Add a border to your padding-box div. Explore different border styles (solid, dashed, dotted, etc.), widths, and colors.
+Challenge: Create multiple divs with different border styles and experiment with the border-radius property to create rounded corners. */
+
+.border-box {
+    border: green dotted 7px;
+    width: 420px;
+    border-radius: 50%;
+    background-color: lightcoral;
+}
+
+/* 3. Understand Margin
+Objective: Grasp how margins determine the space outside the border, between elements.
+Task: Create another <div> element with a class of margin-box and give it a distinct background color. 
+Apply different margin values and observe how it affects the spacing around the element.
+Experiment: Use negative margins and see how they behave differently from positive values. */
+
+.margin-box {
+    background-color: rgb(162, 146, 203);
+    height: 150px;
+    width: 153px;
+    margin: 28px;
+}
+
+/* 4. Combine All Three
+Objective: Understand how padding, border, and margin work together.
+Task: Create a new <div> with a class of combined-box and apply distinct padding, border, and margin values. Experiment with various combinations to see how they interact.
+Explore Further: Adjust the box-sizing property between content-box and border-box to see how it changes the way the browser calculates the element's total width and height */
+
+.combined-box {
+    background-color: #59D5E0;
+    height:  120px;
+    width: 240px; 
+    margin-left: 40px;
+    padding: 6em; 
+    box-sizing: content-box;
+}
