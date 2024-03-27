@@ -1,4 +1,4 @@
-const students = ['genevieve', 'laura', 'natalia', 'jiwon', 'jordan']
+const students = ['camden', 'genevieve', 'laura', 'natalia', 'jiwon', 'jordan']
 
 function formPairGroups(roster) {
     roster = [...roster]

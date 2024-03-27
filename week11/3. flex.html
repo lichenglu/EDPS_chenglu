@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: flex;
+            gap: 8px;
+            width: 500px;
+        }
+
+        .box {
+            background-color: bisque;
+            flex-basis: 200px;
+        }
+
+        #box1 {
+            flex: 1;
+        }
+
+        #box2 {
+            flex-shrink: 2;
+        }
+
+        #box3 {
+            flex-shrink: 4;
+        }
+    </style>
+</head>
+<body>
+    <!-- use order to reorder them correctly! -->
+    <div class="container">
+        <div class="box" id="box1">hello</div>
+        <div class="box" id="box2">my</div>
+        <div class="box" id="box3">friend</div>
+    </div>
+</body>
+</html>
