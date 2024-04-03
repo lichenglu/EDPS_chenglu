@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @keyframes moveSun {
+        /* animate bottom and left */
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  </head>
+  <body>
+    <div class="sky">
+      <div class="sun"></div>
+      <div id="count-down">06:00:00</div>
+    </div>
+    <script>
+      const totalLength = 12 * 60 * 60;
+      const animationLength = 4.9;
+      let currentTime = dayjs("2024-04-03 06:00:00").unix();
+      let start, previousTime;
+
+      function step(timeStamp) {
+        if (start === undefined) {
+          start = timeStamp;
+        }
+        const elapsed = timeStamp - (previousTime ?? start);
+        previousTime = timeStamp;
+
+        if (timeStamp - start > 5 * 1000) {
+            return
+        }
+
+        const timeLapsed = (totalLength / animationLength) * (elapsed / 1000);
+        currentTime += timeLapsed;
+
+        document.getElementById("count-down").innerHTML = dayjs
+          .unix(currentTime)
+          .format("HH:mm:ss");
+      }
+
+      setInterval(() => {
+        window.requestAnimationFrame(step);
+      }, 10);
+    </script>
+  </body>
+</html>

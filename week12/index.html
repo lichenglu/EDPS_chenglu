@@ -9,6 +9,28 @@
         .box {
             background-color: antiquewhite;
         }
+
+        .my-row {
+            display: flex;
+            flex-wrap: wrap; 
+            
+        }
+        
+        .my-col-3 {
+            display: flex;
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        
+        .my-col{
+            flex-grow: 1;
+            max-width: 100%;
+        }
+        .my-col-10 {
+            display: flex;
+            flex: 0 0 83.333333%;
+            max-width: 83.33333%;
+        }
     </style>
 </head>
 <body>
@@ -18,6 +40,15 @@
             <div class="col-3 box">Col-2</div>
             <div class="col box">Col-3</div>
             <div class="col-10 box">Col-4</div>
+        </div>
+    </div>
+
+    <div class="my-container" style="margin-top: 12px;">
+        <div class="my-row">
+            <div class="my-col-3 box">my col 1</div>
+            <div class="my-col-3 box">my col 2</div>
+            <div class="my-col box">my col 3</div>
+            <div class="my-col-10 box">my col 4</div>
         </div>
     </div>
 </body>
