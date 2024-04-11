@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am from the best Team </title>
+
+    <style>
+      .flex-container{
+        display: flex;
+        flex-direction: row;
+        /* align-items: flex-start; */
+        width: fit-content;
+        height:fit-content;
+        border-radius: 5px;
+        gap: 8px;
+        
+      }  
+      .flex-item {
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+        height: 360px;
+        background-color: bisque;
+        border-radius: 25px;
+      }
+
+      img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        
+      }
+      .top {
+        border-radius: 5px;
+        width: fit-content;
+        max-width: 100%;
+        padding: 5px;
+        margin: 15px;
+      }
+      
+      .technology {
+        background-color: red;
+       
+      }
+      .picture {
+        padding: 0px;
+        margin: 0px;
+        border-radius: 25px 25px 0 0;
+      }
+      .top-picture {
+        border-radius: 25px;
+      }
+      .popular {
+        background-color: lightblue;
+      }
+
+      .design {
+        background-color: pink;
+      }
+      .middle{
+        margin: 15px;
+      }
+      .bottom{
+        display: flex;
+        align-items: left;
+        margin: 15px;
+      }
+      .round-pic {
+        clip-path: circle();
+        width: 50px;
+        height: 50px;
+        padding-right: 10px;
+      }
+      .small-bold{
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+   
+    <div class="flex-container">
+        <div class="flex-item">
+            <div class="picture">
+                <img class="top-picture" src="https://imgs.search.brave.com/OBZBEf6fldPJVwSp6atvT3MwMN7w4YF7ssaEEM-OQ_w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTA5/ODI4MzYwOC9waG90/by90cnVjay1kcml2/ZXItc3RvY2staW1h/Z2UuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPVVabzc1Vm9B/dzZIOENEZVNNRzhF/MmhTV250YjFDUkpj/Z0xOODU0LUZjeXc9" alt="Image 1">
+            </div>
+            <div class="caption">
+              <div class="top technology">Technology</div>
+              <div class="middle">
+                <h4>
+                  Why is this man in front of a truck?
+                </h4>
+                <p>An exploration into a stranger's life.</p>
+              </div> 
+              <div class="bottom">
+                <img class="round-pic" src="https://imgs.search.brave.com/pCOO_AFwYMfErUxTjHzki_IX-ZMhj8OEyMFnbVgP0Q8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMw/MzM2NjQ4My9waG90/by9wb3J0cmFpdC1v/Zi1zbWlsaW5nLWFm/cmljYW4tYW1lcmlj/YW4teW91bmctd29t/YW4taW5kb29ycy10/YWxraW5nLXRvLWNh/bWVyYS12aWRlby1j/YWxsaW5nLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz15cXVF/NFRLa29vVU5EZk5M/azBhTEdPTXR1RzBJ/THQ0UERNcW1SQ0ow/TTVFPQ"/>    
+                <div class="bottom-text">
+                  <div class="small-bold">
+                    Carrie Underwood
+                  </div>
+                  <div>
+                    Hey, everyone.
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="flex-item">
+            <div class="picture">
+                <img class="top-picture" src="https://imgs.search.brave.com/jHH1lYKRlNHCwgGFAdjJgRffH5kSH369fu-b4gmRvO0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly92aWNr/eWZsaXBmbG9wdHJh/dmVscy5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTUvMDQv/QW5vdGhlci1UYWot/TWFoYWwuanBn" alt="Image 1">
+            </div>
+            <div class="caption">
+              <div class="top popular">Popular</div>
+              <div class="middle">
+                <h4>
+                  We love Laura, yes we do??
+                </h4>
+                <p>An in depth look at deceit, anger, and violence.</p>
+              </div> 
+              <div class="bottom">
+                <img class="round-pic" src="https://imgs.search.brave.com/pCOO_AFwYMfErUxTjHzki_IX-ZMhj8OEyMFnbVgP0Q8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMw/MzM2NjQ4My9waG90/by9wb3J0cmFpdC1v/Zi1zbWlsaW5nLWFm/cmljYW4tYW1lcmlj/YW4teW91bmctd29t/YW4taW5kb29ycy10/YWxraW5nLXRvLWNh/bWVyYS12aWRlby1j/YWxsaW5nLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz15cXVF/NFRLa29vVU5EZk5M/azBhTEdPTXR1RzBJ/THQ0UERNcW1SQ0ow/TTVFPQ"/>    
+                <div class="bottom-text">
+                  <div class="small-bold">
+                    Carrie Underwood
+                  </div>
+                  <div>
+                    Hey, everyone.
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="flex-item">
+            <div class="picture">
+                <img class="top-picture" src="https://imgs.search.brave.com/jNGGjsyaPWx-h1bGaUk44gFQKYw6nbPmG6Ehrq88lfw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTU5/MzcxNzkxL3Bob3Rv/L3Rhai1tYWhhbC1p/bmRpYS5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9TTVqNVdP/Ti1zYjVJYmVGeEU4/d0kzQ1JoRjFsWU8y/UWVGd0diSU1ZZzZm/Yz0" alt="Image 1">
+            </div>
+            <div class="caption">
+              <div class="top technology">Design</div>
+              <div class="middle">
+                <h4>
+                  Why is this man in front of a truck?
+                </h4>
+                <p>An exploration into a stranger's life.</p>
+              </div> 
+              <div class="bottom">
+                <img class="round-pic" src="https://imgs.search.brave.com/qCthjk1YoGud97v5MB74yW7-gcDHwsFHkf7ziPEOftA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yb3Zp/bXVzaWMucm92aWNv/cnAuY29tL2ltYWdl/LmpwZz9jPXNLeXhO/aGktcE9RdTVuXzZl/R29CSmh5aE0tT0ZJ/OHpHNGwtcVZwWFhC/MUk9JmY9NA"/>    
+                <div class="bottom-text">
+                  <div class="small-bold">
+                    Carrie Underwood
+                  </div>
+                  <div>
+                    Hey, everyone.
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+</body>
+</html>
