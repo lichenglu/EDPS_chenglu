@@ -1,108 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I am from Team 1</title>
     <style>
+      .emu {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 12px 12px 0 0;
+      }
 
-        
-        .emu{
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            overflow: hidden;
-            border-radius: 12px 12px 0 0;
-        }
-        
-        .puppy{
-            width:50px;
-            height:50px; 
-            border-radius: 50%
-        
-        }
+      .puppy {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
 
-        .animal{
-            margin-top: 2%;
-            margin-left: 14px;
-        }
+      .animal {
+        margin-top: 2%;
+        margin-left: 14px;
+      }
 
-        .author {
-            display: flex;
-            margin-top: 2%;
-            margin-left: 14px;
-            flex-direction: row;
-            align-items: center;
-            padding-bottom: 15px;
-        }
+      .author {
+        display: flex;
+        margin-top: 2%;
+        margin-left: 14px;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 15px;
+      }
 
-        .body{
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        .container-fluid {
-            display: flex;
-            flex-direction: column;
-            width: 300px;
-            height: fit-content;
-            border-width: 10px;
-            border-radius: 12px;
-            background: #f8f8f8;
-        }      
-        
-        .people{
-              padding-left: 5%;
-              font-weight: bolder;
-        }
+      .body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-        .people p {
-            margin: 0;
-        }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
 
-        .people .name {
-            font-size: 1.2em;
-        }
+      .myContainer-fluid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        border-width: 10px;
+        border-radius: 12px;
+        background: #f8f8f8;
+      }
 
-        .people .time {
-            font-size: 0.8em;
+      @media (min-width: 520px) {
+        .myContainer-fluid {
+            width: calc(100% / 2 - 10px);
         }
-        
-        .hour{
-            display: flex;
-            flex-direction: column;
-            color: grey;
-        
+      }
+
+      @media (min-width: 960px) {
+        .myContainer-fluid {
+            width: calc(100% / 3 - 10px);
         }
-        .jiwon{
-            width: fit-content;  
-            border-radius: 8px;
-            padding: 0 8px;        
-            background-color: #3EB5CE;
-            border-width: 100px;
-        }
+      }
+
+      .people {
+        padding-left: 5%;
+        font-weight: bolder;
+      }
+
+      .people p {
+        margin: 0;
+      }
+
+      .people .name {
+        font-size: 1.2em;
+      }
+
+      .people .time {
+        font-size: 0.8em;
+      }
+
+      .hour {
+        display: flex;
+        flex-direction: column;
+        color: grey;
+      }
+
+      .jiwon {
+        width: fit-content;
+        border-radius: 8px;
+        padding: 0 8px;
+        background-color: #3eb5ce;
+        border-width: 100px;
+      }
     </style>
-</head>
-<body>
-        <div class="container-fluid">
-            <img class="emu" src="https://cdn.pixabay.com/photo/2023/02/14/09/03/bird-7789120_1280.jpg"/>  
-        
-            <div class="animal">
-                <div class="jiwon">
-              <h2><strong>Animals</strong></h2></div>
-                <h1>Why are emus like this?</h1>
-                  <p>A mob of emus are seen destroying the world!</p>
-            </div>
+  </head>
+  <body>
+    <div class="flex-container">
+    <div class="myContainer-fluid">
+      <img
+        class="emu"
+        src="https://cdn.pixabay.com/photo/2023/02/14/09/03/bird-7789120_1280.jpg"/>
 
-            <div class="author">
-                <img class="puppy" src="https://nativepet.com/cdn/shop/articles/Pomeranian_Running_x1000.jpg?v=1682032382"/>
-                <div class="people">
-                  <p class="name">Genevieve, Laura, and Jiwon</p>
-                  <p class="time">3 hours</p>
-                </div>
-            </div>
-            
-            
-
+      <div class="animal">
+        <div class="jiwon">
+          <h2><strong>Animals</strong></h2>
         </div>
-</body>
+        <h1>Why are emus like this?</h1>
+        <p>A mob of emus are seen destroying the world!</p>
+      </div>
+
+      <div class="author">
+        <img
+          class="puppy"
+          src="https://nativepet.com/cdn/shop/articles/Pomeranian_Running_x1000.jpg?v=1682032382"
+        />
+        <div class="people">
+          <p class="name">Genevieve, Laura, and Jiwon</p>
+          <p class="time">3 hours</p>
+        </div>
+      </div>
+    </div>
+    <div class="myContainer-fluid">
+      <img
+        class="emu"
+        src="https://cdn.pixabay.com/photo/2023/02/14/09/03/bird-7789120_1280.jpg"/>
+
+      <div class="animal">
+        <div class="jiwon">
+          <h2><strong>Animals</strong></h2>
+        </div>
+        <h1>Why are emus like this?</h1>
+        <p>A mob of emus are seen destroying the world!</p>
+      </div>
+
+      <div class="author">
+        <img
+          class="puppy"
+          src="https://nativepet.com/cdn/shop/articles/Pomeranian_Running_x1000.jpg?v=1682032382"
+        />
+        <div class="people">
+          <p class="name">Genevieve, Laura, and Jiwon</p>
+          <p class="time">3 hours</p>
+        </div>
+      </div>
+    </div>
+    <div class="myContainer-fluid">
+      <img
+        class="emu"
+        src="https://cdn.pixabay.com/photo/2023/02/14/09/03/bird-7789120_1280.jpg"/>
+
+      <div class="animal">
+        <div class="jiwon">
+          <h2><strong>Animals</strong></h2>
+        </div>
+        <h1>Why are emus like this?</h1>
+        <p>A mob of emus are seen destroying the world!</p>
+      </div>
+
+      <div class="author">
+        <img
+          class="puppy"
+          src="https://nativepet.com/cdn/shop/articles/Pomeranian_Running_x1000.jpg?v=1682032382"
+        />
+        <div class="people">
+          <p class="name">Genevieve, Laura, and Jiwon</p>
+          <p class="time">3 hours</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
 </html>
