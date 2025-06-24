@@ -1,6 +1,6 @@
-const students = ['camden', 'genevieve', 'laura', 'natalia', 'jiwon', 'jordan']
+const students = ['Sina', 'Dallin', 'Linlin', 'Qing']
 
-function formPairGroups(roster, peoplePerGroup = 3) {
+function formPairGroups(roster, peoplePerGroup = 2) {
     roster = [...roster]
     let tempGroup = []
     const groups = []

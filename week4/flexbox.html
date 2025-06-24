@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        .col-1 {
+            flex: 0.4;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col-2 {
+            flex: 0.6;
+            background-color: green;
+        }
+
+        .item {
+            flex: 1;
+            border: solid 1px black;
+            display: flex;
+            justify-content: center;
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body>
+    <!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+    <div class="container">
+        <div class="col-1">
+            Col-1
+        </div>
+        <div class="col-2">
+            <div class="item container">
+              <div class="item">Row 1 Col 1</div>
+              <div class="item">Row 1 Col 2</div>
+            </div>
+            <div class="item container">
+              <div class="item">Row 1 Col 1</div>
+              <div class="item">Row 1 Col 2</div>
+            </div>
+            <div class="item container">
+                <div class="item">Row 1 Col 1</div>
+              <div class="item">Row 1 Col 2</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
